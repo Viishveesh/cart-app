@@ -1,0 +1,13 @@
+{
+  "name": "cart-app",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "format:check": "prettier --check .",
+    "build": "node scripts/build.js"
+  },
+  "devDependencies": {
+    "prettier": "^3.10.1"
+  }
+}
