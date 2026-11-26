@@ -33,3 +33,17 @@ jobs:
     steps:
       - name: Create a file
         run: echo "This is a new file created by Vishvesh" > newfile.txt
+      - uses: actions/upload-artifact@v7
+        with:
+          name: newfile
+          path: newfile.txt
+  
+  read-file:
+    needs: create-file
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: newfile
+      - run: cat newfile.txt
+        
