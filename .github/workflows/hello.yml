@@ -26,3 +26,9 @@ jobs:
 
       - name: Say Hello
         run: echo "Hello, World! This pipeline is triggered by ${{github.actor}} and this is the environment variable APP_NAME ${{env.APP_NAME}}. Hello, ${{vars.GREETING}}!"
+  
+  create-file: #second job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create a file
+        run: echo "This is a new file created by Vishvesh" > newfile.txt
