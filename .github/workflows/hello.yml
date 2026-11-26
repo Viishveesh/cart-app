@@ -1,6 +1,15 @@
 name: Hello # name
 
-on: push #event
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+  workflow_dispatch:
 
 jobs:
   say-hello: #first job
